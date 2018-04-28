@@ -1,6 +1,6 @@
-package com.unb.rfid.reader.run;
+package com.rfid.reader.run;
 
-import com.unb.rfid.reader.services.ConnectionService;
+import com.rfid.reader.services.ConnectionService;
 
 public class RFIDReaderMain {
     public static void main(String[] args) {

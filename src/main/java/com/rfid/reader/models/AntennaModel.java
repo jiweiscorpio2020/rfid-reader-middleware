@@ -1,4 +1,4 @@
-package com.unb.rfid.reader.models;
+package com.rfid.reader.models;
 
 import com.microsoft.azure.storage.table.TableServiceEntity;
 

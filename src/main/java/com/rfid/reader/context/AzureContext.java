@@ -1,4 +1,4 @@
-package com.unb.rfid.reader.context;
+package com.rfid.reader.context;
 
 import com.microsoft.azure.storage.CloudStorageAccount;
 import com.microsoft.azure.storage.StorageException;

@@ -1,10 +1,10 @@
-package com.unb.rfid.reader.repository;
+package com.rfid.reader.repository;
 
 import com.microsoft.azure.storage.*;
 import com.microsoft.azure.storage.table.*;
-import com.unb.rfid.reader.context.AzureContext;
-import com.unb.rfid.reader.models.AntennaModel;
-import com.unb.rfid.reader.models.LogModel;
+import com.rfid.reader.context.AzureContext;
+import com.rfid.reader.models.AntennaModel;
+import com.rfid.reader.models.LogModel;
 
 import java.net.URISyntaxException;
 import java.security.InvalidKeyException;
