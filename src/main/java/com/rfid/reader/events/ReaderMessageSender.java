@@ -1,8 +1,9 @@
 package com.rfid.reader.events;
 
-import com.microsoft.azure.storage.StorageException;
+import com.microsoft.azure.sdk.iot.device.Message;
 import com.rfid.reader.models.LogModel;
 import com.rfid.reader.models.ReadModel;
+import com.rfid.reader.services.IoTHubService;
 import com.rfid.reader.services.ReaderService;
 import com.rfid.reader.util.JsonUtil;
 import com.thingmagic.TagReadData;
@@ -10,7 +11,6 @@ import com.thingmagic.TagReadData;
 import java.net.InetAddress;
 import java.net.URISyntaxException;
 import java.net.UnknownHostException;
-import java.security.InvalidKeyException;
 import java.time.LocalDateTime;
 
 public class ReaderMessageSender implements Runnable {
@@ -29,27 +29,47 @@ public class ReaderMessageSender implements Runnable {
                                 tr.epcString(),
                                 tr.getAntenna(),
                                 LocalDateTime.now().toString());
-                        //TODO: Refactory method for IoT Hub
-                        //QueueStorageService.insertReadQueue(new JsonUtil().serialize(readModel));
+
+                        String readJson = new JsonUtil().serialize(readModel);
+                        Message msg = new Message(readJson);
+
+                        Object lock = new Object();
+                        DeviceMessageSender.DeviceEventCallback callback = new DeviceMessageSender.DeviceEventCallback();
+
+                        IoTHubService.sendEventDeviceAsync(msg, callback, lock);
+
+                        synchronized (lock) {
+                            lock.wait();
+                        }
+
+                        System.out.println("Sending message Read: " + readJson);
                     }
                 }
             }
         } catch (Exception e) {
             try {
                 synchronizeException(e);
-            } catch (URISyntaxException | StorageException | UnknownHostException | InvalidKeyException se) {
+            } catch (URISyntaxException | UnknownHostException se) {
                 se.printStackTrace();
             }
         }
     }
 
-    private static void synchronizeException(Exception exception) throws URISyntaxException, StorageException, UnknownHostException, InvalidKeyException {
+    private static void synchronizeException(Exception exception) throws URISyntaxException, UnknownHostException {
         LogModel logModel = new LogModel(
                 InetAddress.getLocalHost().getHostAddress(),
                 exception.getMessage(),
                 exception.getStackTrace().toString(),
                 LocalDateTime.now().toString());
-        //TODO: Refactory method for IoT Hub
-        //QueueStorageService.insertLogQueue(new JsonUtil().serialize(logModel));
+
+        String logJson = new JsonUtil().serialize(logModel);
+        Message msg = new Message(logJson);
+
+        Object lock = new Object();
+        DeviceMessageSender.DeviceEventCallback callback = new DeviceMessageSender.DeviceEventCallback();
+
+        IoTHubService.sendEventDeviceAsync(msg, callback, lock);
+
+        System.out.println("Sending message Log: " + logJson);
     }
 }

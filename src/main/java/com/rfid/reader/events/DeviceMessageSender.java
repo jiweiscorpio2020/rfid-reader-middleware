@@ -5,7 +5,7 @@ import com.microsoft.azure.sdk.iot.device.IotHubStatusCode;
 import com.microsoft.azure.sdk.iot.device.Message;
 import com.rfid.reader.models.TelemetryModel;
 import com.rfid.reader.services.ReaderService;
-import com.rfid.reader.services.TelemetryService;
+import com.rfid.reader.services.IoTHubService;
 import com.rfid.reader.util.JsonUtil;
 import com.thingmagic.ReaderException;
 
@@ -28,16 +28,16 @@ public class DeviceMessageSender implements Runnable {
                 String telemetryJson = new JsonUtil().serialize(telemetryModel);
                 Message msg = new Message(telemetryJson);
 
-                System.out.println("Sending message: " + telemetryJson);
-
                 Object lock = new Object();
                 DeviceEventCallback callback = new DeviceEventCallback();
 
-                TelemetryService.sendEventDeviceAsync(msg, callback, lock);
+                IoTHubService.sendEventDeviceAsync(msg, callback, lock);
 
                 synchronized (lock) {
                     lock.wait();
                 }
+
+                System.out.println("Sending message Telemetry: " + telemetryJson);
 
                 Thread.sleep(1000);
             }
@@ -47,7 +47,7 @@ public class DeviceMessageSender implements Runnable {
         }
     }
 
-    private static class DeviceEventCallback implements IotHubEventCallback {
+    public static class DeviceEventCallback implements IotHubEventCallback {
         public void execute(IotHubStatusCode status, Object context) {
             System.out.println("IoT Hub responded to message with status: " + status.name());
 

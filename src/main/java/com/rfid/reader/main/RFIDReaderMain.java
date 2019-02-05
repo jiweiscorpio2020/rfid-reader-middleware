@@ -3,7 +3,7 @@ package com.rfid.reader.main;
 import com.rfid.reader.events.DeviceMessageSender;
 import com.rfid.reader.events.ReaderMessageSender;
 import com.rfid.reader.services.ReaderService;
-import com.rfid.reader.services.TelemetryService;
+import com.rfid.reader.services.IoTHubService;
 import com.thingmagic.ReaderException;
 
 import java.io.IOException;
@@ -21,7 +21,7 @@ public class RFIDReaderMain {
             System.out.println("--------- Middleware RFID Reader ---------");
 
             ReaderService.connectionReader();
-            TelemetryService.connectDevice();
+            IoTHubService.connectDevice();
 
             ReaderMessageSender readerMessageSender = new ReaderMessageSender();
             executorServiceReader.execute(readerMessageSender);
@@ -36,7 +36,7 @@ public class RFIDReaderMain {
             executorServiceDevice.shutdownNow();
 
             ReaderService.disconnectionReader();
-            TelemetryService.disconnectionDevice();
+            IoTHubService.disconnectionDevice();
         }
     }
 }
