@@ -2,16 +2,17 @@ package com.rfid.reader.models;
 
 public class ReadModel {
 
-    public String epc;
     public String ip;
-    public int antenna;
+    public String epc;
     public String readDate;
+    public int antenna;
+    public int telemetryType;
 
-    public ReadModel(String ip, String epc, int antenna, String readDate) {
+    public ReadModel(String ip, String epc, String readDate, int antenna, int telemetryType) {
         this.ip = ip;
         this.epc = epc;
-        this.ip = ip;
-        this.antenna = antenna;
         this.readDate = readDate;
+        this.antenna = antenna;
+        this.telemetryType = telemetryType;
     }
 }

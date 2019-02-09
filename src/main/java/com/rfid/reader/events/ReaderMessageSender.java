@@ -1,6 +1,7 @@
 package com.rfid.reader.events;
 
 import com.microsoft.azure.sdk.iot.device.Message;
+import com.rfid.reader.enums.TelemetryTypeEnum;
 import com.rfid.reader.models.LogModel;
 import com.rfid.reader.models.ReadModel;
 import com.rfid.reader.services.IoTHubService;
@@ -27,8 +28,9 @@ public class ReaderMessageSender implements Runnable {
                         ReadModel readModel = new ReadModel(
                                 InetAddress.getLocalHost().getHostAddress(),
                                 tr.epcString(),
+                                LocalDateTime.now().toString(),
                                 tr.getAntenna(),
-                                LocalDateTime.now().toString());
+                                TelemetryTypeEnum.READ.getEnumValue());
 
                         String readJson = new JsonUtil().serialize(readModel);
                         Message msg = new Message(readJson);
@@ -60,7 +62,8 @@ public class ReaderMessageSender implements Runnable {
                 InetAddress.getLocalHost().getHostAddress(),
                 exception.getMessage(),
                 exception.getStackTrace().toString(),
-                LocalDateTime.now().toString());
+                LocalDateTime.now().toString(),
+                TelemetryTypeEnum.LOG.getEnumValue());
 
         String logJson = new JsonUtil().serialize(logModel);
         Message msg = new Message(logJson);

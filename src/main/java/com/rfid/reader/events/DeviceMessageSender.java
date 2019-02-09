@@ -3,6 +3,7 @@ package com.rfid.reader.events;
 import com.microsoft.azure.sdk.iot.device.IotHubEventCallback;
 import com.microsoft.azure.sdk.iot.device.IotHubStatusCode;
 import com.microsoft.azure.sdk.iot.device.Message;
+import com.rfid.reader.enums.TelemetryTypeEnum;
 import com.rfid.reader.models.TelemetryModel;
 import com.rfid.reader.services.ReaderService;
 import com.rfid.reader.services.IoTHubService;
@@ -22,6 +23,7 @@ public class DeviceMessageSender implements Runnable {
                 TelemetryModel telemetryModel = new TelemetryModel(
                         InetAddress.getLocalHost().getHostAddress(),
                         ReaderService.getTemperature(),
+                        TelemetryTypeEnum.TELEMETRY.getEnumValue(),
                         ReaderService.isConnection()
                 );
 
