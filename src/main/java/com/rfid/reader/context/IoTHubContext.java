@@ -9,8 +9,8 @@ public class IoTHubContext {
 
     private static final String CONNECTION_STRING =
             "HostName=rfid-iot-hub.azure-devices.net;" +
-                    "DeviceId=DeviceRfid;" +
-                    "SharedAccessKey=9KVOsdfhqEnGObK1+jSmZ50SJaETd4dZyAStTZUGHag=";
+            "DeviceId=DeviceRfid;" +
+            "SharedAccessKey=tNQO8hSvrKO94OydAcwDDsNEJ0GYv148ua4cVm27PJc=";
     private static IotHubClientProtocol iotHubClientProtocol = IotHubClientProtocol.AMQPS;
     private static DeviceClient deviceClient;
 
