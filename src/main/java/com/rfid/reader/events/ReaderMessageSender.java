@@ -13,6 +13,7 @@ import java.net.InetAddress;
 import java.net.URISyntaxException;
 import java.net.UnknownHostException;
 import java.time.LocalDateTime;
+import java.util.Arrays;
 
 public class ReaderMessageSender implements Runnable {
 
@@ -61,7 +62,7 @@ public class ReaderMessageSender implements Runnable {
         LogModel logModel = new LogModel(
                 InetAddress.getLocalHost().getHostAddress(),
                 exception.getMessage(),
-                exception.getStackTrace().toString(),
+                Arrays.toString(exception.getStackTrace()),
                 LocalDateTime.now().toString(),
                 TelemetryTypeEnum.LOG.getEnumValue());
 
