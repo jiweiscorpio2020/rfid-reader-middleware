@@ -6,9 +6,9 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="58599991-f599-4242-ae67-d6d2b8fe2c6a" name="Default" comment="Update connection string IoT Hub e refactory class (private)">
+    <list default="true" id="58599991-f599-4242-ae67-d6d2b8fe2c6a" name="Default" comment="Update StackTrace RFID">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/rfid/reader/events/ReaderMessageSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rfid/reader/events/ReaderMessageSender.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rfid/reader/context/IoTHubContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rfid/reader/context/IoTHubContext.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -100,32 +100,33 @@
     <session id="761030214">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="15" />
+          <entry key="project.closed" value="19" />
           <entry key="project.open.time.10" value="3" />
-          <entry key="project.open.time.11" value="1" />
+          <entry key="project.open.time.11" value="2" />
           <entry key="project.open.time.13" value="3" />
-          <entry key="project.open.time.14" value="2" />
+          <entry key="project.open.time.14" value="3" />
           <entry key="project.open.time.15" value="1" />
           <entry key="project.open.time.16" value="1" />
           <entry key="project.open.time.17" value="1" />
+          <entry key="project.open.time.18" value="1" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.22" value="2" />
           <entry key="project.open.time.9" value="2" />
-          <entry key="project.opened" value="17" />
+          <entry key="project.opened" value="20" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="MF" value="4" />
           <entry key="class" value="1" />
-          <entry key="java" value="116" />
+          <entry key="java" value="128" />
           <entry key="xml" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="1" />
-          <entry key="JAVA" value="116" />
+          <entry key="JAVA" value="128" />
           <entry key="Manifest" value="4" />
           <entry key="XML" value="3" />
         </counts>
@@ -133,15 +134,15 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="36" />
-          <entry key="java" value="989" />
-          <entry key="txt" value="201" />
+          <entry key="java" value="1020" />
+          <entry key="txt" value="225" />
           <entry key="xml" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="989" />
-          <entry key="PLAIN_TEXT" value="237" />
+          <entry key="JAVA" value="1020" />
+          <entry key="PLAIN_TEXT" value="261" />
           <entry key="XML" value="8" />
         </counts>
       </usages-collector>
@@ -153,26 +154,7 @@
     </favorites_list>
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/rfid/reader/main/RFIDReaderMain.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="202">
-              <caret line="30" column="31" lean-forward="true" selection-start-line="30" selection-start-column="31" selection-end-line="30" selection-end-column="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/rfid/reader/events/ReaderMessageSender.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="64" column="59" lean-forward="true" selection-start-line="64" selection-start-column="59" selection-end-line="64" selection-end-column="59" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -223,13 +205,13 @@
         <option value="$PROJECT_DIR$/src/main/java/com/rfid/reader/services/ReaderService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/rfid/reader/enums/TelemetryTypeEnum.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/rfid/reader/context/IoTHubContext.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/rfid/reader/models/LogModel.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/rfid/reader/models/ReadModel.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/rfid/reader/models/TelemetryModel.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/rfid/reader/main/RFIDReaderMain.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/rfid/reader/events/DeviceMessageSender.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/rfid/reader/events/ReaderMessageSender.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rfid/reader/context/IoTHubContext.java" />
       </list>
     </option>
   </component>
@@ -286,6 +268,27 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="PackagesPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="RFIDReader" type="58d84e3e:PackageViewProjectNode" />
+              <item name="rfid-reader" type="616d4139:PackageViewModuleNode" />
+            </path>
+            <path>
+              <item name="RFIDReader" type="58d84e3e:PackageViewProjectNode" />
+              <item name="rfid-reader" type="616d4139:PackageViewModuleNode" />
+              <item name="com.rfid.reader" type="1f31426a:PackageElementNode" />
+            </path>
+            <path>
+              <item name="RFIDReader" type="58d84e3e:PackageViewProjectNode" />
+              <item name="rfid-reader" type="616d4139:PackageViewModuleNode" />
+              <item name="META-INF" type="1f31426a:PackageElementNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -341,37 +344,10 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="RFIDReader" type="58d84e3e:PackageViewProjectNode" />
-              <item name="rfid-reader" type="616d4139:PackageViewModuleNode" />
-            </path>
-            <path>
-              <item name="RFIDReader" type="58d84e3e:PackageViewProjectNode" />
-              <item name="rfid-reader" type="616d4139:PackageViewModuleNode" />
-              <item name="com.rfid.reader" type="1f31426a:PackageElementNode" />
-            </path>
-            <path>
-              <item name="RFIDReader" type="58d84e3e:PackageViewProjectNode" />
-              <item name="rfid-reader" type="616d4139:PackageViewModuleNode" />
-              <item name="com.rfid.reader" type="1f31426a:PackageElementNode" />
-              <item name="events" type="1f31426a:PackageElementNode" />
-            </path>
-            <path>
-              <item name="RFIDReader" type="58d84e3e:PackageViewProjectNode" />
-              <item name="rfid-reader" type="616d4139:PackageViewModuleNode" />
-              <item name="META-INF" type="1f31426a:PackageElementNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1558292698922" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1558391498972" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/lib" />
     <property name="project.structure.last.edited" value="Libraries" />
@@ -537,7 +513,14 @@
       <option name="project" value="LOCAL" />
       <updated>1551657291177</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Update StackTrace RFID">
+      <created>1558391472190</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1558391472190</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TodoView">
@@ -551,9 +534,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.4678179" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2193646" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.24810892" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -566,7 +548,7 @@
       <window_info anchor="bottom" id="Debug" order="3" weight="0.30163935" />
       <window_info anchor="bottom" id="Message" order="4" />
       <window_info anchor="bottom" id="Find" order="5" />
-      <window_info anchor="bottom" id="Terminal" order="6" sideWeight="0.4750378" weight="0.27874187" />
+      <window_info anchor="bottom" id="Terminal" order="6" sideWeight="0.4750378" weight="0.27868852" />
       <window_info anchor="bottom" id="Run" order="7" sideWeight="0.49848714" weight="0.3229508" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
@@ -662,7 +644,8 @@
     <MESSAGE value="Telemetry type enum and refactory models" />
     <MESSAGE value="Update libs" />
     <MESSAGE value="Update connection string IoT Hub e refactory class (private)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update connection string IoT Hub e refactory class (private)" />
+    <MESSAGE value="Update StackTrace RFID" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update StackTrace RFID" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -759,52 +742,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rfid/reader/enums/TelemetryTypeEnum.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="3" selection-start-line="3" selection-end-line="5" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rfid/reader/util/JsonUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="211">
           <caret line="36" column="27" selection-start-line="36" selection-start-column="27" selection-end-line="36" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rfid/reader/context/IoTHubContext.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="7" column="28" lean-forward="true" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rfid/reader/models/ReadModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="8" column="11" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rfid/reader/models/TelemetryModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rfid/reader/models/LogModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="4" column="22" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -815,9 +756,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rfid/reader/util/JsonUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/rfid/reader/services/ReaderService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
+        <state relative-caret-position="48">
           <caret line="19" column="24" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
         </state>
       </provider>
@@ -829,13 +777,52 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rfid/reader/models/TelemetryModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rfid/reader/models/ReadModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="8" column="11" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rfid/reader/models/LogModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="4" column="22" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rfid/reader/main/RFIDReaderMain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="22" column="45" lean-forward="true" selection-start-line="22" selection-start-column="45" selection-end-line="22" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rfid/reader/events/ReaderMessageSender.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="64" column="16" selection-start-line="64" selection-start-column="16" selection-end-line="64" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/rfid/reader/events/DeviceMessageSender.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-100">
+        <state relative-caret-position="-400">
           <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rfid/reader/enums/TelemetryTypeEnum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="1" lean-forward="true" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -846,17 +833,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rfid/reader/main/RFIDReaderMain.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rfid/reader/context/IoTHubContext.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="30" column="31" lean-forward="true" selection-start-line="30" selection-start-column="31" selection-end-line="30" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/rfid/reader/events/ReaderMessageSender.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="64" column="59" lean-forward="true" selection-start-line="64" selection-start-column="59" selection-end-line="64" selection-end-column="59" />
+        <state relative-caret-position="100">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
         </state>
       </provider>
     </entry>

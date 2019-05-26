@@ -8,9 +8,9 @@ import java.net.URISyntaxException;
 public class IoTHubContext {
 
     private static final String CONNECTION_STRING =
-            "HostName=rfid-iot-hub.azure-devices.net;" +
-            "DeviceId=DeviceRfid;" +
-            "SharedAccessKey=tNQO8hSvrKO94OydAcwDDsNEJ0GYv148ua4cVm27PJc=";
+            "HostName={HOST_NAME};" +
+            "DeviceId={DEVICE_ID};" +
+            "SharedAccessKey={KEY}";
     private static IotHubClientProtocol iotHubClientProtocol = IotHubClientProtocol.AMQPS;
     private static DeviceClient deviceClient;
 
